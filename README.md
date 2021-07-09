@@ -8,6 +8,9 @@
 [![](https://img.shields.io/badge/donate-QIWI-FF8C00.svg)](https://qiwi.com/n/ZALEXANNINEV15)
 [![](https://img.shields.io/badge/donate-YooMoney-8B3FFD.svg)](https://yoomoney.ru/to/410015106319420)
 
+## Скриншот
+![alt text](https://i.imgur.com/olrE4fe.png)
+
 ## Описание
 
 Создание установщика для плагина для инструмента [Windows in Telegram](https://zalexanninev15.jimdofree.com/%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B8-%D0%B8%D0%B3%D1%80%D1%8B/windows-in-telegram)

@@ -2,6 +2,7 @@
 
 [![](https://img.shields.io/badge/OS-Windows-informational?logo=windows)](https://github.com/Zalexanninev15/WiT-PluginSDK)
 [![](https://img.shields.io/github/v/release/Zalexanninev15/WiT-PluginSDK)](https://github.com/Zalexanninev15/WiT-PluginSDK/releases/latest)
+[![](https://img.shields.io/github/release-pre/Zalexanninev15/WiT-PluginSDK)](https://github.com/Zalexanninev15/WiT-PluginSDK/releases)
 [![](https://img.shields.io/github/downloads/Zalexanninev15/WiT-PluginSDK/total.svg)](https://github.com/Zalexanninev15/WiT-PluginSDK/releases)
 [![](https://img.shields.io/github/last-commit/Zalexanninev15/WiT-PluginSDK)](https://github.com/Zalexanninev15/WiT-PluginSDK/commits/master)
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)

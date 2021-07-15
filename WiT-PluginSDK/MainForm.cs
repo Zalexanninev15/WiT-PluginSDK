@@ -48,9 +48,9 @@ namespace WiT_PluginSDK
                 try { Directory.CreateDirectory("out"); } catch { }
                 File.WriteAllText(@Application.StartupPath + @"\out\help.wit3.plg.micro", Help.Text);
                 string about = "Название: " + PName.Text + "\nВерсия: " + Version.Text + "\nАвтор: " + Author.Text + "\nКоманда: " + CommandReg.Text;
-                File.WriteAllText(@Application.StartupPath + @"\out\about.wit3.plg.micro", @about);
-                string cfg = "API: " + API.SelectedItem + "\nОтладка: " + debug.Checked.ToString() + "\nЧистый вызов: " + ccControl.Checked.ToString();
-                File.WriteAllText(@Application.StartupPath + @"\out\config.wit3.plg.micro", cfg);
+                File.WriteAllText(@Application.StartupPath + @"\out\about.wit3.plg.micro", about);
+                string cfg = "API: " + API.SelectedItem + "\nОтладка: " + debug.Checked.ToString().ToLower() + "\nЧистый вызов: " + ccControl.Checked.ToString().ToLower() + "\nОтключён: " + disChk.Checked.ToString().ToLower();
+                File.WriteAllText(@Application.StartupPath + @"\out\core.config.wit3.plg.micro", cfg);
                 try
                 {
                     TextWriter writer = new StreamWriter(@Application.StartupPath + @"\out\files.wit3.plg.micro");
@@ -68,7 +68,7 @@ namespace WiT_PluginSDK
             if (Directory.Exists("out"))
             {
                 openFile.FileName = "";
-                openFile.Filter = "Файл плагина|api.dll";
+                openFile.Filter = "Файл плагина| api.dll";
                 openFile.Title = "Импортировать библиотеку плагина";
                 openFile.Multiselect = false;
                 if (openFile.ShowDialog() == DialogResult.OK)
@@ -181,7 +181,7 @@ namespace WiT_PluginSDK
             Version.Text = line[1].Replace("Версия: ", "");
             Author.Text = line[2].Replace("Автор: ", "");
             CommandReg.Text = line[3].Replace("Команда: ", "");
-            line = File.ReadAllLines(@Application.StartupPath + @"\out\config.wit3.plg.micro");
+            line = File.ReadAllLines(@Application.StartupPath + @"\out\core.config.wit3.plg.micro");
             API.SelectedItem = line[0].Replace("API: ", "");
             debug.Checked = Convert.ToBoolean(line[1].Replace("Отладка: ", ""));
             ccControl.Checked = Convert.ToBoolean(line[2].Replace("Чистый вызов: ", ""));

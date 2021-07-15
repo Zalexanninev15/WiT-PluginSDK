@@ -71,6 +71,7 @@ namespace WiT_PluginSDK
             this.button2 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.disChk = new System.Windows.Forms.CheckBox();
             this.menuStrip.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -366,6 +367,7 @@ namespace WiT_PluginSDK
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.disChk);
             this.groupBox3.Controls.Add(this.ccControl);
             this.groupBox3.Controls.Add(this.debug);
             this.groupBox3.Controls.Add(this.button8);
@@ -380,7 +382,7 @@ namespace WiT_PluginSDK
             // ccControl
             // 
             this.ccControl.AutoSize = true;
-            this.ccControl.Location = new System.Drawing.Point(17, 45);
+            this.ccControl.Location = new System.Drawing.Point(35, 45);
             this.ccControl.Name = "ccControl";
             this.ccControl.Size = new System.Drawing.Size(321, 20);
             this.ccControl.TabIndex = 2;
@@ -392,7 +394,7 @@ namespace WiT_PluginSDK
             // debug
             // 
             this.debug.AutoSize = true;
-            this.debug.Location = new System.Drawing.Point(17, 21);
+            this.debug.Location = new System.Drawing.Point(35, 21);
             this.debug.Name = "debug";
             this.debug.Size = new System.Drawing.Size(118, 20);
             this.debug.TabIndex = 2;
@@ -469,6 +471,18 @@ namespace WiT_PluginSDK
             this.label11.Size = new System.Drawing.Size(69, 16);
             this.label11.TabIndex = 0;
             this.label11.Text = "Удаление:";
+            // 
+            // disChk
+            // 
+            this.disChk.AutoSize = true;
+            this.disChk.Location = new System.Drawing.Point(157, 21);
+            this.disChk.Name = "disChk";
+            this.disChk.Size = new System.Drawing.Size(194, 20);
+            this.disChk.TabIndex = 2;
+            this.disChk.TabStop = false;
+            this.disChk.Text = "Отключить после установки";
+            this.disChk.UseVisualStyleBackColor = true;
+            this.disChk.Visible = false;
             // 
             // MainForm
             // 
@@ -548,6 +562,7 @@ namespace WiT_PluginSDK
         System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         System.Windows.Forms.ToolStripMenuItem созданиеБиблиотекиПлагинаToolStripMenuItem;
         System.Windows.Forms.ToolStripMenuItem купитьPremiumдляИспользованияПлагиновВБотеToolStripMenuItem;
+        private System.Windows.Forms.CheckBox disChk;
     }
 }
 

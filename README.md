@@ -1,5 +1,7 @@
 # WiT PluginSDK | [Последняя версия](https://github.com/Zalexanninev15/WiT-PluginSDK/releases/latest)
 
+![](https://github.com/Zalexanninev15/WiT-PluginSDK/blob/main/WiT-PluginSDK_Logo.png?raw=true)
+
 [![](https://img.shields.io/badge/OS-Windows-informational?logo=windows)](https://github.com/Zalexanninev15/WiT-PluginSDK)
 [![](https://img.shields.io/github/v/release/Zalexanninev15/WiT-PluginSDK)](https://github.com/Zalexanninev15/WiT-PluginSDK/releases/latest)
 [![](https://img.shields.io/github/release-pre/Zalexanninev15/WiT-PluginSDK)](https://github.com/Zalexanninev15/WiT-PluginSDK/releases)

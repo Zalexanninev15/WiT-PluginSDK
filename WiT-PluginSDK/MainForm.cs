@@ -11,10 +11,11 @@ namespace WiT_PluginSDK
         public MainForm() { InitializeComponent(); }
         void обSDKToolStripMenuItem_Click(object sender, EventArgs e) { MessageBox.Show("WiT PluginSDK\nВерсия: " + Application.ProductVersion.Replace(".0", "") + "\nАвтор: Zalexanninev15", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         void MainForm_Load(object sender, EventArgs e) { if (Directory.Exists("out")) { Directory.Delete("out", true); } }
-        void toolStripMenuItem1_Click(object sender, EventArgs e) { if (Directory.Exists("out")) { Directory.Delete("out", true); } }
+        void toolStripMenuItem1_Click(object sender, EventArgs e) { if (Directory.Exists("out")) { Directory.Delete("out", true); } listBox1.Items.Clear(); MessageBox.Show("Очистка завершена успешно!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         void MainForm_FormClosed(object sender, FormClosedEventArgs e) { if (Directory.Exists("out")) { Directory.Delete("out", true); } }
         void купитьPremiumДляWiTToolStripMenuItem_Click(object sender, EventArgs e) { try { Process.Start("https://teletype.in/@zalexanninev15/buy"); } catch { MessageBox.Show("Браузер по умолчанию не найден, поэтому сслылка скопирована в буфер обмена!", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning); Clipboard.SetText("https://teletype.in/@zalexanninev15/buy"); } }
         void созданиеБиблиотекиПлагинаToolStripMenuItem_Click(object sender, EventArgs e) { try { Process.Start("https://teletype.in/@zalexanninev15/wit3_devplugin"); } catch { MessageBox.Show("Браузер по умолчанию не найден, поэтому сслылка скопирована в буфер обмена!", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning); Clipboard.SetText("https://teletype.in/@zalexanninev15/wit3_devplugin"); } }
+        void toolStripMenuItem4_Click(object sender, EventArgs e) { Application.Restart(); }
 
         void упаковатьПлагинToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -27,7 +28,8 @@ namespace WiT_PluginSDK
                     {
                         if (PName.Text != "" && Version.Text != "" && API.Text != "" && Author.Text != "" && Help.Text != "" && CommandReg.Text != "")
                         {
-
+                            if (File.Exists(saveFile.FileName)) { File.Delete(saveFile.FileName); }
+                            System.Threading.Tasks.Task.Delay(100);
                             ZipFile.CreateFromDirectory("out", "plugin.wit");
                             File.Move("plugin.wit", saveFile.FileName);
                             MessageBox.Show("Плагин сохранён!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -49,11 +51,11 @@ namespace WiT_PluginSDK
                 File.WriteAllText(@Application.StartupPath + @"\out\help.wit3.plg.micro", Help.Text);
                 string about = "Название: " + PName.Text + "\nВерсия: " + Version.Text + "\nАвтор: " + Author.Text + "\nКоманда: " + CommandReg.Text;
                 File.WriteAllText(@Application.StartupPath + @"\out\about.wit3.plg.micro", about);
-                string cfg = "API: " + API.SelectedItem + "\nОтладка: " + debug.Checked.ToString().ToLower() + "\nЧистый вызов: " + ccControl.Checked.ToString().ToLower() + "\nОтключён: " + disChk.Checked.ToString().ToLower();
+                string cfg = "API: " + API.SelectedItem + "\n!Отладка: " + debug.Checked.ToString().ToLower() + "\n!Простой вызов: " + ccControl.Checked.ToString().ToLower() + "\n!Включён: " + disChk.Checked.ToString().ToLower();
                 File.WriteAllText(@Application.StartupPath + @"\out\core.config.wit3.plg.micro", cfg);
                 try
                 {
-                    TextWriter writer = new StreamWriter(@Application.StartupPath + @"\out\files.wit3.plg.micro");
+                    StreamWriter writer = new StreamWriter(@Application.StartupPath + @"\out\files.wit3.plg.micro");
                     foreach (var item in listBox1.Items) { writer.WriteLine(item.ToString()); }
                     writer.Close();
                 }
@@ -170,7 +172,7 @@ namespace WiT_PluginSDK
                     MessageBox.Show("Плагин загружен!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Данные плагина повреждены!\n" + ex.ToString(), "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            catch (Exception ex) { MessageBox.Show("Данные плагина повреждены!\n" + ex.Message.ToString(), "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         void PluginReader()
@@ -183,8 +185,8 @@ namespace WiT_PluginSDK
             CommandReg.Text = line[3].Replace("Команда: ", "");
             line = File.ReadAllLines(@Application.StartupPath + @"\out\core.config.wit3.plg.micro");
             API.SelectedItem = line[0].Replace("API: ", "");
-            debug.Checked = Convert.ToBoolean(line[1].Replace("Отладка: ", ""));
-            ccControl.Checked = Convert.ToBoolean(line[2].Replace("Чистый вызов: ", ""));
+            debug.Checked = Convert.ToBoolean(line[1].Replace("!Отладка: ", ""));
+            ccControl.Checked = Convert.ToBoolean(line[2].Replace("!Простой вызов: ", ""));
             listBox1.Items.Clear();
             line = File.ReadAllLines(@Application.StartupPath + @"\out\files.wit3.plg.micro");
             for (int i = 0; i < line.Length; i++) { listBox1.Items.Add(line[i]); }

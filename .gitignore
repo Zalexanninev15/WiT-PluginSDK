@@ -1,0 +1,12 @@
+
+WiT-PluginSDK/.vs/PluginSDK/v16/.suo
+*.exe
+*.pdb
+WiT-PluginSDK/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttributes.cs
+WiT-PluginSDK/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+WiT-PluginSDK/obj/Debug/PluginSDK.csproj.AssemblyReference.cache
+WiT-PluginSDK/obj/Debug/PluginSDK.csproj.CoreCompileInputs.cache
+WiT-PluginSDK/obj/Debug/PluginSDK.csproj.FileListAbsolute.txt
+WiT-PluginSDK/obj/Debug/PluginSDK.csproj.GenerateResource.cache
+WiT-PluginSDK/obj/Debug/WiT_PluginSDK.MainForm.resources
+WiT-PluginSDK/obj/Debug/WiT_PluginSDK.Properties.Resources.resources

@@ -63,6 +63,7 @@ namespace WiT_PluginSDK
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.disChk = new System.Windows.Forms.CheckBox();
             this.ccControl = new System.Windows.Forms.CheckBox();
             this.debug = new System.Windows.Forms.CheckBox();
             this.button8 = new System.Windows.Forms.Button();
@@ -71,7 +72,8 @@ namespace WiT_PluginSDK
             this.button2 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.disChk = new System.Windows.Forms.CheckBox();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -99,7 +101,9 @@ namespace WiT_PluginSDK
             this.упаковатьПлагинсохранитьПроектToolStripMenuItem,
             this.toolStripSeparator1,
             this.сформироватьПроектToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.toolStripSeparator3,
+            this.toolStripMenuItem4});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(60, 20);
             this.toolStripMenuItem2.Text = "Проект";
@@ -379,6 +383,18 @@ namespace WiT_PluginSDK
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Конфигурация [НЕДОСТУПНО]";
             // 
+            // disChk
+            // 
+            this.disChk.AutoSize = true;
+            this.disChk.Location = new System.Drawing.Point(157, 21);
+            this.disChk.Name = "disChk";
+            this.disChk.Size = new System.Drawing.Size(194, 20);
+            this.disChk.TabIndex = 2;
+            this.disChk.TabStop = false;
+            this.disChk.Text = "Отключить после установки";
+            this.disChk.UseVisualStyleBackColor = true;
+            this.disChk.Visible = false;
+            // 
             // ccControl
             // 
             this.ccControl.AutoSize = true;
@@ -472,17 +488,17 @@ namespace WiT_PluginSDK
             this.label11.TabIndex = 0;
             this.label11.Text = "Удаление:";
             // 
-            // disChk
+            // toolStripMenuItem4
             // 
-            this.disChk.AutoSize = true;
-            this.disChk.Location = new System.Drawing.Point(157, 21);
-            this.disChk.Name = "disChk";
-            this.disChk.Size = new System.Drawing.Size(194, 20);
-            this.disChk.TabIndex = 2;
-            this.disChk.TabStop = false;
-            this.disChk.Text = "Отключить после установки";
-            this.disChk.UseVisualStyleBackColor = true;
-            this.disChk.Visible = false;
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(273, 22);
+            this.toolStripMenuItem4.Text = "Закрыть проект";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(270, 6);
             // 
             // MainForm
             // 
@@ -563,6 +579,8 @@ namespace WiT_PluginSDK
         System.Windows.Forms.ToolStripMenuItem созданиеБиблиотекиПлагинаToolStripMenuItem;
         System.Windows.Forms.ToolStripMenuItem купитьPremiumдляИспользованияПлагиновВБотеToolStripMenuItem;
         private System.Windows.Forms.CheckBox disChk;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
 

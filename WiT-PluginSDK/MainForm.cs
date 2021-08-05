@@ -51,7 +51,7 @@ namespace WiT_PluginSDK
                 File.WriteAllText(@Application.StartupPath + @"\out\help.wit3.plg.micro", Help.Text);
                 string about = "Название: " + PName.Text + "\nВерсия: " + Version.Text + "\nАвтор: " + Author.Text + "\nКоманда: " + CommandReg.Text;
                 File.WriteAllText(@Application.StartupPath + @"\out\about.wit3.plg.micro", about);
-                string cfg = "API: " + API.SelectedItem + "\n!Отладка: " + debug.Checked.ToString().ToLower() + "\n!Простой вызов: " + ccControl.Checked.ToString().ToLower() + "\n!Включён: " + disChk.Checked.ToString().ToLower();
+                string cfg = "PluginAPI: " + API.SelectedItem + "\n!Отладка: " + debug.Checked.ToString().ToLower() + "\n!Простой вызов: " + ccControl.Checked.ToString().ToLower() + "\n!Включён: " + disChk.Checked.ToString().ToLower();
                 File.WriteAllText(@Application.StartupPath + @"\out\core.config.wit3.plg.micro", cfg);
                 try
                 {
@@ -184,7 +184,7 @@ namespace WiT_PluginSDK
             Author.Text = line[2].Replace("Автор: ", "");
             CommandReg.Text = line[3].Replace("Команда: ", "");
             line = File.ReadAllLines(@Application.StartupPath + @"\out\core.config.wit3.plg.micro");
-            API.SelectedItem = line[0].Replace("API: ", "");
+            API.SelectedItem = line[0].Replace("PluginAPI: ", "");
             debug.Checked = Convert.ToBoolean(line[1].Replace("!Отладка: ", ""));
             ccControl.Checked = Convert.ToBoolean(line[2].Replace("!Простой вызов: ", ""));
             listBox1.Items.Clear();

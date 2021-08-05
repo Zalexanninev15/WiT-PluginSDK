@@ -37,6 +37,8 @@ namespace WiT_PluginSDK
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.сформироватьПроектToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.созданиеБиблиотекиПлагинаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.купитьPremiumдляИспользованияПлагиновВБотеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,8 +74,6 @@ namespace WiT_PluginSDK
             this.button2 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -140,6 +140,18 @@ namespace WiT_PluginSDK
             this.toolStripMenuItem1.Size = new System.Drawing.Size(273, 22);
             this.toolStripMenuItem1.Text = "Очистить сформированный проект";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(270, 6);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(273, 22);
+            this.toolStripMenuItem4.Text = "Закрыть проект";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // справкаToolStripMenuItem
             // 
@@ -231,20 +243,20 @@ namespace WiT_PluginSDK
             this.API.FormattingEnabled = true;
             this.API.Items.AddRange(new object[] {
             "1.0"});
-            this.API.Location = new System.Drawing.Point(226, 59);
+            this.API.Location = new System.Drawing.Point(245, 59);
             this.API.Name = "API";
-            this.API.Size = new System.Drawing.Size(73, 24);
+            this.API.Size = new System.Drawing.Size(54, 24);
             this.API.TabIndex = 4;
             this.API.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(187, 64);
+            this.label3.Location = new System.Drawing.Point(172, 64);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 16);
+            this.label3.Size = new System.Drawing.Size(69, 16);
             this.label3.TabIndex = 3;
-            this.label3.Text = "API:";
+            this.label3.Text = "PluginAPI:";
             // 
             // label5
             // 
@@ -296,7 +308,7 @@ namespace WiT_PluginSDK
             // 
             this.Version.Location = new System.Drawing.Point(80, 61);
             this.Version.Name = "Version";
-            this.Version.Size = new System.Drawing.Size(101, 22);
+            this.Version.Size = new System.Drawing.Size(75, 22);
             this.Version.TabIndex = 2;
             this.Version.TabStop = false;
             // 
@@ -487,18 +499,6 @@ namespace WiT_PluginSDK
             this.label11.Size = new System.Drawing.Size(69, 16);
             this.label11.TabIndex = 0;
             this.label11.Text = "Удаление:";
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(273, 22);
-            this.toolStripMenuItem4.Text = "Закрыть проект";
-            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(270, 6);
             // 
             // MainForm
             // 

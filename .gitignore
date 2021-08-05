@@ -11,3 +11,8 @@ WiT-PluginSDK/obj/Debug/PluginSDK.csproj.GenerateResource.cache
 WiT-PluginSDK/obj/Debug/WiT_PluginSDK.MainForm.resources
 WiT-PluginSDK/obj/Debug/WiT_PluginSDK.Properties.Resources.resources
 WiT-PluginSDK/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+WiT-PluginSDK/obj/Release/.NETFramework,Version=v4.5.AssemblyAttributes.cs
+*.cache
+WiT-PluginSDK/obj/Release/PluginSDK.csproj.FileListAbsolute.txt
+WiT-PluginSDK/obj/Release/WiT_PluginSDK.MainForm.resources
+WiT-PluginSDK/obj/Release/WiT_PluginSDK.Properties.Resources.resources

@@ -12,7 +12,7 @@
 [![](https://img.shields.io/badge/donate-YooMoney-8B3FFD.svg)](https://yoomoney.ru/to/410015106319420)
 
 ## Скриншот
-![alt text](https://i.imgur.com/olrE4fe.png)
+![screenshot](https://i.imgur.com/n9XwZlb.png)
 
 ## Описание
 

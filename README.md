@@ -10,6 +10,7 @@
 [![](https://img.shields.io/badge/donate-Buy_Me_a_Coffee-F94400.svg)](https://zalexanninev15.jimdofree.com/buy-me-a-coffee)
 
 ## Скриншот
+
 ![screenshot](https://i.imgur.com/n9XwZlb.png)
 
 ## Описание
@@ -22,5 +23,5 @@
 * **Дополнительно:** .NET Framework 4.5
 
 ## Сборка
- 
+
 Компилируем используя [Visual Studio](https://visualstudio.microsoft.com/vs)

@@ -9,7 +9,7 @@ namespace WiT_PluginSDK
     public partial class MainForm : Form
     {
         public MainForm() { InitializeComponent(); }
-        void обSDKToolStripMenuItem_Click(object sender, EventArgs e) { MessageBox.Show("WiT PluginSDK\nВерсия: " + Application.ProductVersion.Replace(".0", "") + "\nАвтор: Zalexanninev15", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+        void обSDKToolStripMenuItem_Click(object sender, EventArgs e) { MessageBox.Show("WiT PluginSDK\nВерсия: " + Convert.ToString(Application.ProductVersion) + "\nАвтор: Zalexanninev15", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         void MainForm_Load(object sender, EventArgs e) { if (Directory.Exists("out")) { Directory.Delete("out", true); } }
         void toolStripMenuItem1_Click(object sender, EventArgs e) { if (Directory.Exists("out")) { Directory.Delete("out", true); } listBox1.Items.Clear(); MessageBox.Show("Очистка завершена успешно!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         void MainForm_FormClosed(object sender, FormClosedEventArgs e) { if (Directory.Exists("out")) { Directory.Delete("out", true); } }

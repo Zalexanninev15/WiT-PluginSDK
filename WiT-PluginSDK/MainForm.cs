@@ -33,7 +33,6 @@ namespace WiT_PluginSDK
                             ZipFile.CreateFromDirectory("out", "plugin.wit");
                             File.Move("plugin.wit", saveFile.FileName);
                             MessageBox.Show("Плагин сохранён!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                         }
                         else { MessageBox.Show("Не найдены некоторые значения настроек проекта! Донастройте проект и сформируйте его заново!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                     }
